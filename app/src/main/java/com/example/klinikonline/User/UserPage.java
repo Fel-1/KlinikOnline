@@ -1,5 +1,12 @@
 package com.example.klinikonline.User;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,15 +17,11 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
-
 import com.example.klinikonline.MainActivity;
 import com.example.klinikonline.R;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -28,6 +31,7 @@ public class UserPage extends AppCompatActivity implements NavigationView.OnNavi
     NavController navController;
     FirebaseUser mFirebaseUser;
     private AppBarConfiguration mAppBarConfiguration;
+    GoogleSignInClient mGoogleSignInClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,16 +62,17 @@ public class UserPage extends AppCompatActivity implements NavigationView.OnNavi
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.logout :
-                FirebaseMessaging.getInstance().unsubscribeFromTopic(mFirebaseUser.getUid());
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(UserPage.this, MainActivity.class));
-                finish();
-                break;
-            default :
-                NavigationUI.onNavDestinationSelected(item,navController);
-                break;
+        if (item.getItemId() == R.id.logout) {
+            FirebaseMessaging.getInstance().unsubscribeFromTopic(mFirebaseUser.getUid());
+            FirebaseAuth.getInstance().signOut();
+            GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build();
+            mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+            mGoogleSignInClient.signOut();
+            startActivity(new Intent(UserPage.this, MainActivity.class));
+            finish();
+        } else {
+            NavigationUI.onNavDestinationSelected(item, navController);
         }
         DrawerLayout drawer = findViewById(R.id.user_drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

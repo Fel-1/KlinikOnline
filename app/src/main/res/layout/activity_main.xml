@@ -67,8 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="32dp"
-            android:text="@string/sign_in"
-            />
+            android:text="@string/sign_in" />
 
         <Button
             android:id="@+id/btn_sign_up"
@@ -76,7 +75,13 @@
             android:layout_height="56dp"
             android:text="@string/sign_up"
             android:layout_marginTop="20dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/google_sign_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
