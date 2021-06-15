@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Admin.ui.home.QueueFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_queue_admin"
+        android:layout_weight="8.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/recycler_admin_queue" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:layout_height="0dp">
+    <Button
+        android:id="@+id/btn_on_off"
+        android:text="@string/nyalakan_antrian"
+        android:layout_width="160dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_height="80dp"/>
+    <Button
+        android:id="@+id/btn_next"
+        android:text="@string/pasien_selanjutnya"
+        android:layout_width="160dp"
+        android:layout_marginEnd="40dp"
+        android:layout_height="80dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "368951964382",
+    "firebase_url": "https://goklinik-802a6-default-rtdb.firebaseio.com",
+    "project_id": "goklinik-802a6",
+    "storage_bucket": "goklinik-802a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368951964382:android:9c6f2eee168546595f884f",
+        "android_client_info": {
+          "package_name": "com.example.klinikonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "368951964382-tjhob3h5hbvjjt90i9rrlcm40o70matf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.klinikonline",
+            "certificate_hash": "d38ecbe666158f67e46fe0bd19e560ac0ebb6e74"
+          }
+        },
+        {
+          "client_id": "368951964382-4shkpc1aj5fr9tvbnk3vu1b89qedg7m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuXJ1eu_GFo85hHjbHz5k9t662tKKoaEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "368951964382-4shkpc1aj5fr9tvbnk3vu1b89qedg7m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

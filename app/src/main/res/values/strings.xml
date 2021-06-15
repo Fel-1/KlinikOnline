@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">KlinikOnline</string>
+    <string name="sign_in">Masuk</string>
+    <string name="register">Daftar</string>
+    <string name="sign_up">Belum Punya Akun? Daftar Sekarang</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_nama_pasien">Nama Pasien</string>
+    <string name="hint_nomor_telepon">Nomor Telepon</string>
+    <string name="hint_alamat">Alamat</string>
+    <string name="title_activity_nav_drawer_admin">NavDrawerAdmin</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="admin">Admin</string>
+    <string name="logout">Logout</string>
+    <string name="tambahkan_dokter">Tambahkan Dokter</string>
+    <string name="tambah_dokter">Tambah Dokter</string>
+    <string name="hint_nama_dokter">Nama Dokter</string>
+    <string name="hari_kerja_dokter">Jadwal Kerja Dokter</string>
+
+    <string name="default_pic" translatable="false">https://firebasestorage.googleapis.com/v0/b/goklinik-802a6.appspot.com/o/upload%2F896156_27-4-2021_17-4-50.png?alt=media&amp;token=1c9639b3-1c48-4de0-8790-a08170a31821</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="jadwal_dokter">Jadwal Dokter</string>
+    <string name="hint_nama">Nama</string>
+    <string name="daftar_antrian">Daftar Antrian</string>
+    <string name="hint_keterangan">Keterangan</string>
+    <string name="confirm_password">Konfirmasi Password</string>
+    <string name="title">Title</string>
+    <string name="nomor_antrian_anda">Nomor Antrian Anda :</string>
+    <string name="belum_terdaftar_dalam_antrian">Loading…</string>
+    <string name="hint_umur_pasien">Umur Pasien</string>
+    <string name="hint_spesialis">Spesialis</string>
+    <string name="text_warning_mask">Ingatlah Untuk Selalu Mengenakan Masker Ketika Berpergian Keluar Rumah</string>
+    <string name="pasien_selanjutnya">Pasien Selanjutnya</string>
+    <string name="sedang_melayani">Sedang Melayani</string>
+    <string name="nyalakan_antrian">Nyalakan Antrian</string>
+    <string name="matikan_antrian">Matikan Antrian</string>
+    <string name="antrian_sedang_tidak_aktif">Antrian Sedang Tidak Aktif</string>
+    <string name="antrian_sedang_aktif">Antrian Sedang Aktif</string>
+    <string name="nomor_kartu_bpjs">Nomor Kartu BPJS</string>
+    <string name="bukan_pengguna_bpjs">Bukan Pengguna BPJS</string>
+    <string name="pengguna_bpjs">Pengguna BPJS</string>
+    <string name="data_pasien">Data Pasien</string>
+
+</resources>
