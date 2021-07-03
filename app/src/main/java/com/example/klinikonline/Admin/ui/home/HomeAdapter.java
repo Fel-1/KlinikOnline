@@ -70,8 +70,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeHolder> {
             case "Poli Penyakit Dalam":
                 holder.iconCIV.setImageResource(R.drawable.ic_human_organs);
                 break;
-            case "Vaksin Covid-19":
-                holder.iconCIV.setImageResource(R.drawable.ic_vaccine);
+            case "Rapid Test Covid-19":
+                holder.iconCIV.setImageResource(R.drawable.ic_coronavirus);
+                break;
+            default:
                 break;
         }
     }

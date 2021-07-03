@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,6 +20,7 @@ import com.example.klinikonline.User.UserPage;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -42,9 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText EmailEdt;
     private EditText PassEdt;
     GoogleSignInClient mGoogleSignInClient;
-    private Button signin, googleSignIn;
+    private Button signin;
     DatabaseReference dbaseref;
-    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,14 +52,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         dbaseref = FirebaseDatabase.getInstance().getReference();
 
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
         firebaseAuth = FirebaseAuth.getInstance();
         EmailEdt = findViewById(R.id.email_edt_text);
         PassEdt = findViewById(R.id.pass_edt_text);
         signin = findViewById(R.id.login_btn);
-        googleSignIn = findViewById(R.id.google_sign_btn);
-        progressBar = findViewById(R.id.login_loading);
         signin.setOnClickListener(this);
-        googleSignIn.setOnClickListener(this);
+        findViewById(R.id.google_sign_btn).setOnClickListener(this);
         findViewById(R.id.login_btn).setOnClickListener(this);
         findViewById(R.id.btn_sign_up).setOnClickListener(this);
     }
